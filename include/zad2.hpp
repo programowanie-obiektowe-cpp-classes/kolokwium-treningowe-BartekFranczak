@@ -14,6 +14,8 @@ public:
 // tutaj definicja metody gotujMakaron
 Makaron* Makaron::gotujMakaron(const std::string& s) 
 {
-    if (s[0]==(s.length()-1)){return new Tagliatelle{3.14,0.42,0.1};}
-    else{return new Penne();}
+    if (s[0]==(s.length()-1))
+        return new Tagliatelle(3.14, .42, .1);
+    else
+        return new Penne();
 }

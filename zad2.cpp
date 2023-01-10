@@ -8,7 +8,7 @@ public:
     virtual double ileMaki(unsigned) const =0;
     static Makaron* gotujMakaron(const std::string& s) 
     {
-        if (s[0]==(s.length()-1)){return new Tagliatelle{3.14,0.42,0.1};}
+        if (s[0]==(s.length()-1)){return new Tagliatelle(3.14, 0.42, 0.1);}
         else{return new Penne();}
     }
 };

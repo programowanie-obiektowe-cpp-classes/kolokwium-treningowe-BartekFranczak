@@ -3,3 +3,4 @@
 #include <functional>
 
 // tutaj funkcja polejSosem
+std::size_t polejSosem
