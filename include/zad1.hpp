@@ -5,21 +5,22 @@
 // BEZ definicji metody gotujMakaron (tylko z deklaracją)
 class Makaron
 {
+
 public:
-    virtual ~Makaron()                      = default;
-    virtual double  ileMaki(unsigned) const = 0;
+    virtual ~Makaron()=default;
+    virtual double ileMaki(unsigned) const =0;
     static Makaron* gotujMakaron(const std::string& s);
 };
-
 // Zad1
 // tutaj definicja klasy Tagliatelle
-class Tagliatelle : public Makaron
+class Tagliatelle
 {
-    double              L, W, R;
+    double L;
+    double W;
+    double R;
     static const double C;
-
 public:
-    Tagliatelle() : L{.5}, W{.5}, R{.5} {}
-    Tagliatelle(double a, double b, double c) : L{a}, W{b}, R{c} {}
-    double ileMaki(unsigned P) const { return static_cast< double >(P) * L * W * (1. - R) * C; }
+    Tagliatelle() : L{0.5}, W{0.5}, R{0.5}{}
+    Tagliatelle(double l, double w, double r) : L{l}, W{w}, R{r} {}
+    double ileMaki(unsigned P) const {return static_cast<double>(P) * L * W * (1. - R) * C;}
 };
