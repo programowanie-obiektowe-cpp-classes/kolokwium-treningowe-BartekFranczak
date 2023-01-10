@@ -7,10 +7,10 @@
 // tutaj klasa Penne
 class Penne : public Makaron
 {
-
 public:
-    double ileMaki(unsigned P) const override{return static_cast<double>(P);}
+    double ileMaki(unsigned P) const { return P; }
 };
+
 // tutaj definicja metody gotujMakaron
 Makaron* Makaron::gotujMakaron(const std::string& s) 
 {
